@@ -17,14 +17,14 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       role="group"
       aria-label="Language selection"
     >
-      <div className="flex items-center ps-2 pe-1 text-[#2563EB] dark:text-[#60A5FA]">
+      <div className="hidden sm:flex items-center ps-2 pe-1 text-[#2563EB] dark:text-[#60A5FA]">
         <Globe className="w-3.5 h-3.5" />
       </div>
 
       <button
         onClick={() => setLanguage("ar")}
         className={cn(
-          "px-2.5 py-1 rounded-lg transition-all duration-200 font-bold cursor-pointer text-[11px] whitespace-nowrap",
+          "px-2 sm:px-2.5 py-1 rounded-lg transition-all duration-200 font-bold cursor-pointer text-[11px] whitespace-nowrap",
           language === "ar"
             ? "bg-[#2563EB] text-white shadow-[0_0_12px_rgba(37,99,235,0.4)] font-black"
             : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white"
@@ -38,7 +38,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
       <button
         onClick={() => setLanguage("en")}
         className={cn(
-          "px-2.5 py-1 rounded-lg transition-all duration-200 font-bold cursor-pointer text-[11px] whitespace-nowrap",
+          "px-2 sm:px-2.5 py-1 rounded-lg transition-all duration-200 font-bold cursor-pointer text-[11px] whitespace-nowrap",
           language === "en"
             ? "bg-[#2563EB] text-white shadow-[0_0_12px_rgba(37,99,235,0.4)] font-black"
             : "text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white"

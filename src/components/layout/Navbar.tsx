@@ -44,26 +44,26 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-2 sm:gap-4">
           {/* Brand Monogram & Name */}
           <a
             href="#hero"
-            className="group flex items-center gap-3 transition-opacity hover:opacity-90 cursor-pointer shrink-0"
+            className="group flex items-center gap-2 sm:gap-3 transition-opacity hover:opacity-90 cursor-pointer shrink-0"
             aria-label="Bassam Methqal Portfolio Home"
           >
-            <div className="relative w-10 h-10 rounded-xl bg-white/90 dark:bg-[#0D131F]/90 text-[#2563EB] dark:text-[#3B82F6] flex items-center justify-center font-mono font-black text-sm tracking-wider border border-[#2563EB]/30 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_15px_rgba(37,99,235,0.2)]">
+            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/90 dark:bg-[#0D131F]/90 text-[#2563EB] dark:text-[#3B82F6] flex items-center justify-center font-mono font-black text-xs sm:text-sm tracking-wider border border-[#2563EB]/30 transition-transform duration-300 group-hover:scale-105 shadow-[0_0_15px_rgba(37,99,235,0.2)]">
               BM
               <span className="absolute -bottom-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#2563EB] dark:bg-[#3B82F6] animate-pulse border-2 border-white dark:border-[#080B11]" />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-base sm:text-lg text-slate-950 dark:text-white leading-tight tracking-tight flex items-center gap-2 font-serifDisplay whitespace-nowrap">
+              <span className="font-bold text-sm sm:text-lg text-slate-950 dark:text-white leading-tight tracking-tight flex items-center gap-2 font-serifDisplay whitespace-nowrap">
                 <span>{language === "ar" ? "بسام مثقال" : "Bassam Methqal"}</span>
                 <span className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-mono bg-[#2563EB]/10 dark:bg-[#2563EB]/15 text-[#2563EB] dark:text-[#60A5FA] border border-[#2563EB]/25 dark:border-[#2563EB]/30">
                   <Activity className="w-2.5 h-2.5 animate-pulse text-[#2563EB] dark:text-[#3B82F6]" />
                   <span>CIS-L3</span>
                 </span>
               </span>
-              <span className="text-[10px] sm:text-[11px] font-mono font-semibold text-slate-600 dark:text-slate-400 tracking-wide whitespace-nowrap">
+              <span className="hidden sm:block text-[11px] font-mono font-semibold text-slate-600 dark:text-slate-400 tracking-wide whitespace-nowrap">
                 {portfolioData.profile.shortRole[language]}
               </span>
             </div>
@@ -86,7 +86,7 @@ export function Navbar() {
           </nav>
 
           {/* Actions: Theme Toggle + Language Switcher + GitHub + Contact CTA + Mobile Menu Button */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             {/* GitHub Profile Quick Link */}
             <a
               href="https://github.com/bassammethqal"

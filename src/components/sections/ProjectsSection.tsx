@@ -28,117 +28,117 @@ export function ProjectsSection() {
     switch (projectId) {
       case "studyflow":
         return (
-          <div className="w-full h-full p-5 flex flex-col justify-between bg-slate-100 dark:bg-[#080B11] text-slate-800 dark:text-slate-200 font-mono text-xs select-none border-b border-slate-200 dark:border-white/10">
-            <div className="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-3">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-slate-600" />
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-slate-600" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
-                <span className="text-[10px] text-slate-500 dark:text-slate-400 ms-2 font-mono">study-flow-mu-pearl.vercel.app</span>
+          <div className="w-full h-full p-4 sm:p-5 flex flex-col justify-between gap-3 bg-slate-100 dark:bg-[#080B11] text-slate-800 dark:text-slate-200 font-mono text-xs select-none border-b border-slate-200 dark:border-white/10">
+            <div dir="ltr" className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-white/10 pb-2.5">
+              <div className="flex items-center gap-1.5 min-w-0">
+                <span className="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[#2563EB] shrink-0" />
+                <span className="text-[10px] text-slate-500 dark:text-slate-400 ml-1.5 font-mono truncate">study-flow-mu-pearl.vercel.app</span>
               </div>
-              <span className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] px-2.5 py-0.5 rounded-full bg-[#2563EB]/10 dark:bg-[#2563EB]/15 border border-[#2563EB]/30 dark:border-[#2563EB]/40 font-bold">
+              <span className="text-[9px] sm:text-[10px] text-[#2563EB] dark:text-[#60A5FA] px-2 py-0.5 rounded-full bg-[#2563EB]/10 dark:bg-[#2563EB]/15 border border-[#2563EB]/30 dark:border-[#2563EB]/40 font-bold whitespace-nowrap shrink-0">
                 REACT + NEON DB
               </span>
             </div>
             
-            <div className="my-2 p-3.5 rounded-2xl bg-white dark:bg-[#0D131F] border border-slate-200 dark:border-white/10 flex items-center justify-between shadow-xs dark:shadow-md">
-              <div>
-                <span className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] font-bold block">STUDYFLOW // v4.1 ACADEMIC</span>
-                <span className="text-sm font-bold text-slate-900 dark:text-white block font-thmanyah">منصة تنظيم حياة ومقررات الطالب</span>
-                <span className="text-[10px] text-slate-600 dark:text-slate-300 font-bold flex items-center gap-1.5 mt-0.5">
-                  <span className="relative flex h-2 w-2">
+            <div className="p-3 sm:p-3.5 rounded-2xl bg-white dark:bg-[#0D131F] border border-slate-200 dark:border-white/10 flex items-center justify-between gap-3 shadow-xs dark:shadow-md">
+              <div className="min-w-0">
+                <span dir="ltr" className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] font-bold block">STUDYFLOW // v4.1 ACADEMIC</span>
+                <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white block font-thmanyah mt-0.5">منصة تنظيم حياة ومقررات الطالب</span>
+                <span className="text-[10px] text-slate-600 dark:text-slate-300 font-bold flex items-center gap-1.5 mt-1">
+                  <span className="relative flex h-2 w-2 shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3B82F6] opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563EB]" />
                   </span>
-                  متابعة المقررات والجداول والمهام الأكاديمية
+                  <span>متابعة المقررات والجداول والمهام الأكاديمية</span>
                 </span>
               </div>
-              <div className="px-3 py-1.5 rounded-xl bg-[#2563EB] text-white text-[11px] font-black shadow-[0_0_15px_rgba(37,99,235,0.4)]">
+              <div className="px-2.5 sm:px-3 py-1.5 rounded-xl bg-[#2563EB] text-white text-[10px] sm:text-[11px] font-black shadow-[0_0_15px_rgba(37,99,235,0.4)] whitespace-nowrap shrink-0">
                 {language === "ar" ? "نظام الطالب" : "STUDENT_SYS"}
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-[10px] text-slate-500 font-mono">
-              <span>STACK: VITE • EXPRESS • NEON POSTGRESQL</span>
-              <span className="text-[#2563EB] dark:text-[#60A5FA]">LIVE DEPLOYMENT</span>
+            <div dir="ltr" className="flex flex-wrap items-center justify-between gap-1.5 text-[9px] sm:text-[10px] text-slate-500 font-mono">
+              <span>STACK: VITE • EXPRESS • NEON DB</span>
+              <span className="text-[#2563EB] dark:text-[#60A5FA] font-bold">LIVE DEPLOYMENT</span>
             </div>
           </div>
         );
 
       case "malaebi":
         return (
-          <div className="w-full h-full p-5 flex flex-col justify-between bg-slate-100 dark:bg-[#080B11] text-slate-800 dark:text-slate-200 font-mono text-xs select-none border-b border-slate-200 dark:border-white/10">
-            <div className="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-3">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-slate-600" />
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-slate-600" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
-                <span className="text-[10px] text-slate-500 dark:text-slate-400 ms-2 font-mono">malaebi-player-psi.vercel.app</span>
+          <div className="w-full h-full p-4 sm:p-5 flex flex-col justify-between gap-3 bg-slate-100 dark:bg-[#080B11] text-slate-800 dark:text-slate-200 font-mono text-xs select-none border-b border-slate-200 dark:border-white/10">
+            <div dir="ltr" className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-white/10 pb-2.5">
+              <div className="flex items-center gap-1.5 min-w-0">
+                <span className="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[#2563EB] shrink-0" />
+                <span className="text-[10px] text-slate-500 dark:text-slate-400 ml-1.5 font-mono truncate">malaebi-player-psi.vercel.app</span>
               </div>
-              <span className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] px-2.5 py-0.5 rounded-full bg-[#2563EB]/10 dark:bg-[#2563EB]/15 border border-[#2563EB]/30 dark:border-[#2563EB]/40 font-bold">
+              <span className="text-[9px] sm:text-[10px] text-[#2563EB] dark:text-[#60A5FA] px-2 py-0.5 rounded-full bg-[#2563EB]/10 dark:bg-[#2563EB]/15 border border-[#2563EB]/30 dark:border-[#2563EB]/40 font-bold whitespace-nowrap shrink-0">
                 17-SCREEN PWA + NESTJS
               </span>
             </div>
 
-            <div className="my-2 p-3.5 rounded-2xl bg-white dark:bg-[#0D131F] border border-slate-200 dark:border-white/10 flex items-center justify-between shadow-xs dark:shadow-md">
-              <div>
-                <span className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] font-bold block">PITCH BOOKING // REALTIME</span>
-                <span className="text-sm font-bold text-slate-900 dark:text-white block font-thmanyah">ملاعبي — حجز الملاعب بالوقت الفعلي</span>
-                <span className="text-[10px] text-slate-600 dark:text-slate-300 font-bold flex items-center gap-1.5 mt-0.5">
-                  <span className="relative flex h-2 w-2">
+            <div className="p-3 sm:p-3.5 rounded-2xl bg-white dark:bg-[#0D131F] border border-slate-200 dark:border-white/10 flex items-center justify-between gap-3 shadow-xs dark:shadow-md">
+              <div className="min-w-0">
+                <span dir="ltr" className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] font-bold block">PITCH BOOKING // REALTIME</span>
+                <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white block font-thmanyah mt-0.5">ملاعبي — حجز الملاعب بالوقت الفعلي</span>
+                <span className="text-[10px] text-slate-600 dark:text-slate-300 font-bold flex items-center gap-1.5 mt-1">
+                  <span className="relative flex h-2 w-2 shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3B82F6] opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563EB]" />
                   </span>
-                  حجز الفترات ومنع التضارب عبر OTP
+                  <span>حجز الفترات ومنع التضارب عبر OTP</span>
                 </span>
               </div>
-              <div className="px-3 py-1.5 rounded-xl bg-[#2563EB] text-white text-[11px] font-black shadow-[0_0_15px_rgba(37,99,235,0.4)]">
+              <div className="px-2.5 sm:px-3 py-1.5 rounded-xl bg-[#2563EB] text-white text-[10px] sm:text-[11px] font-black shadow-[0_0_15px_rgba(37,99,235,0.4)] whitespace-nowrap shrink-0">
                 {language === "ar" ? "حجز ملاعب" : "BOOKING_PWA"}
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-[10px] text-slate-500 font-mono">
-              <span>BACKEND: NESTJS • SUPABASE • POSTGRESQL</span>
-              <span className="text-[#2563EB] dark:text-[#60A5FA]">THMANYAH SANS UI</span>
+            <div dir="ltr" className="flex flex-wrap items-center justify-between gap-1.5 text-[9px] sm:text-[10px] text-slate-500 font-mono">
+              <span>NESTJS • SUPABASE • POSTGRESQL</span>
+              <span className="text-[#2563EB] dark:text-[#60A5FA] font-bold">THMANYAH SANS UI</span>
             </div>
           </div>
         );
 
       case "mareb-events":
         return (
-          <div className="w-full h-full p-5 flex flex-col justify-between bg-slate-100 dark:bg-[#080B11] text-slate-800 dark:text-slate-200 font-mono text-xs select-none border-b border-slate-200 dark:border-white/10">
-            <div className="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-3">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-slate-600" />
-                <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-slate-600" />
-                <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
-                <span className="text-[10px] text-slate-500 dark:text-slate-400 ms-2 font-mono">marebevents.vercel.app</span>
+          <div className="w-full h-full p-4 sm:p-5 flex flex-col justify-between gap-3 bg-slate-100 dark:bg-[#080B11] text-slate-800 dark:text-slate-200 font-mono text-xs select-none border-b border-slate-200 dark:border-white/10">
+            <div dir="ltr" className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-white/10 pb-2.5">
+              <div className="flex items-center gap-1.5 min-w-0">
+                <span className="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-slate-400 dark:bg-slate-600 shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[#2563EB] shrink-0" />
+                <span className="text-[10px] text-slate-500 dark:text-slate-400 ml-1.5 font-mono truncate">marebevents.vercel.app</span>
               </div>
-              <span className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] px-2.5 py-0.5 rounded-full bg-[#2563EB]/10 dark:bg-[#2563EB]/15 border border-[#2563EB]/30 dark:border-[#2563EB]/40 font-bold">
+              <span className="text-[9px] sm:text-[10px] text-[#2563EB] dark:text-[#60A5FA] px-2 py-0.5 rounded-full bg-[#2563EB]/10 dark:bg-[#2563EB]/15 border border-[#2563EB]/30 dark:border-[#2563EB]/40 font-bold whitespace-nowrap shrink-0">
                 NEXT.JS 15 + DRIZZLE ORM
               </span>
             </div>
             
-            <div className="my-2 p-3.5 rounded-2xl bg-white dark:bg-[#0D131F] border border-slate-200 dark:border-white/10 flex items-center justify-between shadow-xs dark:shadow-md">
-              <div>
-                <span className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] font-bold block">HALL &amp; VENUE RESERVATION</span>
-                <span className="text-sm font-bold text-slate-900 dark:text-white block font-thmanyah">مناسبات مأرب — حجز الصالات والقاعات</span>
-                <span className="text-[10px] text-slate-600 dark:text-slate-300 font-bold flex items-center gap-1.5 mt-0.5">
-                  <span className="relative flex h-2 w-2">
+            <div className="p-3 sm:p-3.5 rounded-2xl bg-white dark:bg-[#0D131F] border border-slate-200 dark:border-white/10 flex items-center justify-between gap-3 shadow-xs dark:shadow-md">
+              <div className="min-w-0">
+                <span dir="ltr" className="text-[10px] text-[#2563EB] dark:text-[#60A5FA] font-bold block">HALL &amp; VENUE RESERVATION</span>
+                <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white block font-thmanyah mt-0.5">مناسبات مأرب — حجز الصالات والقاعات</span>
+                <span className="text-[10px] text-slate-600 dark:text-slate-300 font-bold flex items-center gap-1.5 mt-1">
+                  <span className="relative flex h-2 w-2 shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3B82F6] opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2563EB]" />
                   </span>
-                  تقويم التوفر السحابي وإدارة الحجوزات
+                  <span>تقويم التوفر السحابي وإدارة الحجوزات</span>
                 </span>
               </div>
-              <div className="px-3 py-1.5 rounded-xl bg-[#2563EB] text-white text-[11px] font-black shadow-[0_0_15px_rgba(37,99,235,0.4)]">
+              <div className="px-2.5 sm:px-3 py-1.5 rounded-xl bg-[#2563EB] text-white text-[10px] sm:text-[11px] font-black shadow-[0_0_15px_rgba(37,99,235,0.4)] whitespace-nowrap shrink-0">
                 {language === "ar" ? "حجز صالات" : "VENUES_APP"}
               </div>
             </div>
 
-            <div className="flex items-center justify-between text-[10px] text-slate-500 font-mono">
+            <div dir="ltr" className="flex flex-wrap items-center justify-between gap-1.5 text-[9px] sm:text-[10px] text-slate-500 font-mono">
               <span>DATABASE: POSTGRESQL (SUPABASE)</span>
-              <span className="text-[#2563EB] dark:text-[#60A5FA]">MARIB CITY</span>
+              <span className="text-[#2563EB] dark:text-[#60A5FA] font-bold">MARIB CITY</span>
             </div>
           </div>
         );
@@ -197,12 +197,12 @@ export function ProjectsSection() {
                 className="group rounded-3xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-lg dark:cyber-card-shadow hover:border-[#2563EB]/50 hover:shadow-[0_20px_45px_rgba(37,99,235,0.25)] overflow-hidden flex flex-col justify-between transition-all duration-300"
               >
                 {/* Visual Mockup Header */}
-                <div className="h-56 sm:h-64 relative overflow-hidden bg-slate-100 dark:bg-[#080B11]">
+                <div className="min-h-[215px] sm:h-64 relative overflow-hidden bg-slate-100 dark:bg-[#080B11]">
                   {renderProjectVisualMockup(project.id)}
                 </div>
 
                 {/* Project Content */}
-                <div className="p-7 sm:p-9 flex-1 flex flex-col justify-between">
+                <div className="p-5 sm:p-9 flex-1 flex flex-col justify-between">
                   <div>
                     {/* Category & Status */}
                     <div className="flex items-center justify-between gap-3 mb-4">

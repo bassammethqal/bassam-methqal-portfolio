@@ -55,25 +55,25 @@ export function InterestsSection() {
             viewport={{ once: false, amount: 0.15 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             whileHover={{ y: -5, transition: { duration: 0.25 } }}
-            className="lg:col-span-7 group p-8 sm:p-10 rounded-3xl bg-white/90 dark:bg-[#0D131F]/80 border border-slate-200 dark:border-white/10 backdrop-blur-xl shadow-xl shadow-slate-200/50 dark:shadow-none hover:border-[#2563EB]/50 hover:shadow-[0_20px_50px_rgba(37,99,235,0.2)] flex flex-col justify-between relative overflow-hidden transition-all duration-300"
+            className="lg:col-span-7 group p-6 sm:p-10 rounded-3xl bg-white/90 dark:bg-[#0D131F]/80 border border-slate-200 dark:border-white/10 backdrop-blur-xl shadow-xl shadow-slate-200/50 dark:shadow-none hover:border-[#2563EB]/50 hover:shadow-[0_20px_50px_rgba(37,99,235,0.2)] flex flex-col justify-between relative overflow-hidden transition-all duration-300"
           >
             <div>
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="p-3.5 rounded-2xl bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 group-hover:border-[#2563EB]/50 transition-all shadow-xs">
+                  <div className="p-3 rounded-2xl bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 group-hover:border-[#2563EB]/50 transition-all shadow-xs shrink-0">
                     {getInterestIcon(webItem.id)}
                   </div>
-                  <span className="text-xs font-mono font-bold text-[#2563EB] dark:text-[#60A5FA] uppercase tracking-widest">
+                  <span className="text-[11px] sm:text-xs font-mono font-bold text-[#2563EB] dark:text-[#60A5FA] uppercase tracking-widest whitespace-nowrap">
                     PAVILION // 01
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-[#080B11] text-[10px] font-mono text-[#2563EB] dark:text-[#60A5FA] border border-slate-200 dark:border-[#2563EB]/30">
-                  <Code2 className="w-3 h-3 text-[#2563EB] dark:text-[#3B82F6]" />
+                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-[#080B11] text-[10px] font-mono text-[#2563EB] dark:text-[#60A5FA] border border-slate-200 dark:border-[#2563EB]/30 whitespace-nowrap">
+                  <Code2 className="w-3 h-3 text-[#2563EB] dark:text-[#3B82F6] shrink-0" />
                   <span>NEXT.JS 15 // TS</span>
                 </div>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3.5 group-hover:text-[#2563EB] dark:group-hover:text-[#60A5FA] transition-colors font-thmanyah">
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3.5 group-hover:text-[#2563EB] dark:group-hover:text-[#60A5FA] transition-colors font-serifDisplay">
                 {webItem.title}
               </h3>
 
@@ -82,21 +82,21 @@ export function InterestsSection() {
               </p>
 
               {/* Simulated Code Architecture Preview */}
-              <div className="p-4 rounded-2xl bg-slate-100/90 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 font-mono text-xs text-slate-800 dark:text-slate-300 space-y-1.5 mb-6 shadow-inner">
-                <div className="flex items-center justify-between text-[10px] text-slate-500 pb-2 border-b border-slate-200 dark:border-white/5">
+              <div dir="ltr" className="p-4 rounded-2xl bg-slate-100/90 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 font-mono text-[11px] sm:text-xs text-slate-800 dark:text-slate-300 space-y-1.5 mb-6 shadow-inner text-left overflow-x-auto">
+                <div className="flex items-center justify-between gap-2 text-[10px] text-slate-500 pb-2 border-b border-slate-200 dark:border-white/5 whitespace-nowrap">
                   <span className="flex items-center gap-1 text-[#2563EB] dark:text-[#60A5FA] font-bold">
                     <Terminal className="w-3 h-3 text-[#2563EB]" />
                     <span>AppRouter.tsx</span>
                   </span>
                   <span className="text-[#2563EB] dark:text-[#3B82F6]">React 19 + TypeScript</span>
                 </div>
-                <p className="text-slate-900 dark:text-white font-bold">
+                <p className="text-slate-900 dark:text-white font-bold whitespace-nowrap">
                   export async function <span className="text-[#2563EB] dark:text-[#60A5FA]">DigitalSolution</span>() {`{`}
                 </p>
-                <p className="ps-4 text-slate-500 dark:text-slate-400">
+                <p className="pl-4 text-slate-500 dark:text-slate-400 whitespace-nowrap">
                   const data = await <span className="text-[#2563EB] dark:text-[#3B82F6]">fetchSystemsMetrics</span>(&apos;CIS-SRU&apos;);
                 </p>
-                <p className="ps-4 text-[#2563EB] dark:text-[#60A5FA]">
+                <p className="pl-4 text-[#2563EB] dark:text-[#60A5FA] whitespace-nowrap">
                   return &lt;<span className="text-slate-900 dark:text-white">ResponsiveInterface</span> data={'{data}'} telemetry=&quot;active&quot; /&gt;;
                 </p>
                 <p className="text-slate-900 dark:text-white">{`}`}</p>
@@ -123,25 +123,25 @@ export function InterestsSection() {
             viewport={{ once: false, amount: 0.15 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             whileHover={{ y: -5, transition: { duration: 0.25 } }}
-            className="lg:col-span-5 group p-8 sm:p-10 rounded-3xl bg-white/90 dark:bg-[#0D131F]/80 border border-slate-200 dark:border-white/10 backdrop-blur-xl shadow-xl shadow-slate-200/50 dark:shadow-none hover:border-[#2563EB]/50 hover:shadow-[0_20px_50px_rgba(37,99,235,0.2)] flex flex-col justify-between relative overflow-hidden transition-all duration-300"
+            className="lg:col-span-5 group p-6 sm:p-10 rounded-3xl bg-white/90 dark:bg-[#0D131F]/80 border border-slate-200 dark:border-white/10 backdrop-blur-xl shadow-xl shadow-slate-200/50 dark:shadow-none hover:border-[#2563EB]/50 hover:shadow-[0_20px_50px_rgba(37,99,235,0.2)] flex flex-col justify-between relative overflow-hidden transition-all duration-300"
           >
             <div>
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="p-3.5 rounded-2xl bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 group-hover:border-[#2563EB]/50 transition-all shadow-xs">
+                  <div className="p-3 rounded-2xl bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 group-hover:border-[#2563EB]/50 transition-all shadow-xs shrink-0">
                     {getInterestIcon(cisItem.id)}
                   </div>
-                  <span className="text-xs font-mono font-bold text-[#2563EB] dark:text-[#60A5FA] uppercase tracking-widest">
+                  <span className="text-[11px] sm:text-xs font-mono font-bold text-[#2563EB] dark:text-[#60A5FA] uppercase tracking-widest whitespace-nowrap">
                     PAVILION // 02
                   </span>
                 </div>
-                <div className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-[#080B11] text-[10px] font-mono text-[#2563EB] dark:text-[#60A5FA] border border-slate-200 dark:border-[#2563EB]/30">
-                  <Database className="w-3 h-3 text-[#2563EB] dark:text-[#3B82F6]" />
+                <div className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-[#080B11] text-[10px] font-mono text-[#2563EB] dark:text-[#60A5FA] border border-slate-200 dark:border-[#2563EB]/30 whitespace-nowrap">
+                  <Database className="w-3 h-3 text-[#2563EB] dark:text-[#3B82F6] shrink-0" />
                   <span>SQL // 3NF</span>
                 </div>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3.5 group-hover:text-[#2563EB] dark:group-hover:text-[#60A5FA] transition-colors font-thmanyah">
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3.5 group-hover:text-[#2563EB] dark:group-hover:text-[#60A5FA] transition-colors font-serifDisplay">
                 {cisItem.title}
               </h3>
 
@@ -150,15 +150,15 @@ export function InterestsSection() {
               </p>
 
               {/* Relational Database Matrix HUD */}
-              <div className="p-4 rounded-2xl bg-slate-100/90 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 font-mono text-xs space-y-2 mb-6">
-                <div className="flex items-center justify-between text-[10px] text-slate-500 pb-2 border-b border-slate-200 dark:border-white/5">
+              <div dir="ltr" className="p-4 rounded-2xl bg-slate-100/90 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 font-mono text-xs space-y-2 mb-6 text-left overflow-x-auto">
+                <div className="flex items-center justify-between gap-2 text-[10px] text-slate-500 pb-2 border-b border-slate-200 dark:border-white/5 whitespace-nowrap">
                   <span>RELATIONAL SCHEMA</span>
                   <span className="text-[#2563EB] dark:text-[#60A5FA]">CIS_3RD_LEVEL</span>
                 </div>
-                <div className="text-[11px] text-slate-800 dark:text-slate-300">
+                <div className="text-[11px] text-slate-800 dark:text-slate-300 whitespace-nowrap">
                   <span className="text-[#2563EB] dark:text-[#3B82F6]">TABLE</span> Systems_Architecture (
                 </div>
-                <div className="ps-4 text-[10px] text-slate-600 dark:text-slate-400 space-y-0.5">
+                <div className="pl-4 text-[10px] text-slate-600 dark:text-slate-400 space-y-0.5 whitespace-nowrap">
                   <div>id: <span className="text-[#2563EB] dark:text-[#60A5FA]">UUID PRIMARY KEY</span>,</div>
                   <div>specialty: <span className="text-slate-900 dark:text-white">VARCHAR(&quot;CIS&quot;)</span>,</div>
                   <div>relational_integrity: <span className="text-[#2563EB] dark:text-[#3B82F6]">BOOLEAN(TRUE)</span></div>

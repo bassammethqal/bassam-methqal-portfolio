@@ -83,24 +83,24 @@ export function SkillsSection() {
                   viewport={{ once: false, amount: 0.15 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.4 }}
-                  className="p-8 sm:p-10 rounded-3xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-lg dark:cyber-card-shadow hover:border-[#2563EB]/50 hover:shadow-[0_15px_35px_rgba(37,99,235,0.25)] flex flex-col justify-between relative overflow-hidden transition-all duration-300"
+                  className="p-6 sm:p-10 rounded-3xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-lg dark:cyber-card-shadow hover:border-[#2563EB]/50 hover:shadow-[0_15px_35px_rgba(37,99,235,0.25)] flex flex-col justify-between relative overflow-hidden transition-all duration-300"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-200 dark:border-white/10">
-                      <div className="flex items-center gap-3.5">
-                        <div className="p-3.5 rounded-2xl bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 shadow-sm text-[#2563EB] dark:text-[#3B82F6]">
+                    <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-200 dark:border-white/10">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="p-3 sm:p-3.5 rounded-2xl bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 shadow-sm text-[#2563EB] dark:text-[#3B82F6] shrink-0">
                           {categoryIcons[actualIdx % categoryIcons.length]}
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <span className="text-[10px] font-mono font-bold text-[#2563EB] dark:text-[#60A5FA] uppercase tracking-widest block mb-0.5">
                             {categoryCodes[actualIdx % categoryCodes.length]}
                           </span>
-                          <h3 className="text-xl sm:text-2xl font-bold text-slate-950 dark:text-white font-serifDisplay">
+                          <h3 className="text-lg sm:text-2xl font-bold text-slate-950 dark:text-white font-serifDisplay">
                             {category.title}
                           </h3>
                         </div>
                       </div>
-                      <span className="text-xs font-mono font-bold text-[#2563EB] dark:text-[#3B82F6] px-2.5 py-1 rounded bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10">
+                      <span className="text-[11px] sm:text-xs font-mono font-bold text-[#2563EB] dark:text-[#3B82F6] px-2.5 py-1 rounded bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 whitespace-nowrap shrink-0">
                         {category.skills.length} ITEMS
                       </span>
                     </div>
@@ -110,17 +110,17 @@ export function SkillsSection() {
                       {category.skills.map((skill, sIdx) => (
                         <div
                           key={sIdx}
-                          className="group/item p-3.5 rounded-2xl bg-slate-50 dark:bg-[#080B11]/70 border border-slate-200/60 dark:border-white/5 hover:border-[#2563EB]/40 flex items-center justify-between gap-3 transition-all duration-200"
+                          className="group/item p-3.5 rounded-2xl bg-slate-50 dark:bg-[#080B11]/70 border border-slate-200/60 dark:border-white/5 hover:border-[#2563EB]/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3 transition-all duration-200"
                         >
-                          <div className="flex items-center gap-2.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] dark:bg-[#3B82F6] group-hover/item:scale-150 transition-transform" />
+                          <div className="flex items-center gap-2.5 min-w-0">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] dark:bg-[#3B82F6] group-hover/item:scale-150 transition-transform shrink-0" />
                             <span className="text-sm font-bold text-slate-800 dark:text-white group-hover/item:text-[#2563EB] dark:group-hover/item:text-[#60A5FA] transition-colors">
                               {skill.name}
                             </span>
                           </div>
                           {skill.status && (
                             <span
-                              className={`text-[10px] font-mono font-semibold px-2.5 py-1 rounded-lg border ${getStatusBadge(
+                              className={`self-start sm:self-auto text-[10px] font-mono font-semibold px-2.5 py-1 rounded-lg border whitespace-nowrap shrink-0 ${getStatusBadge(
                                 skill.status
                               )}`}
                             >

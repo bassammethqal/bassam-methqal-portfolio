@@ -197,7 +197,7 @@ export function HeroSection() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-              className="relative group w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px]"
+              className="relative group w-full max-w-[295px] sm:max-w-[380px] lg:max-w-[420px]"
             >
               {/* Corner Notches */}
               <div className="absolute -top-3 -start-3 w-7 h-7 border-t-2 border-s-2 border-[#2563EB] dark:border-[#3B82F6] z-30 pointer-events-none shadow-[0_0_12px_rgba(37,99,235,0.4)]" />

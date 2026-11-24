@@ -124,8 +124,8 @@ export function ContactSection() {
             <div className="space-y-4">
               {/* Email (Clickable mailto + Copy button) */}
               {email ? (
-                <div className="group p-5 sm:p-6 rounded-2xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-sm dark:cyber-card-shadow hover:border-[#2563EB]/50 hover:shadow-[0_15px_35px_rgba(37,99,235,0.2)] flex items-center justify-between gap-4 transition-all duration-300">
-                  <div className="flex items-center gap-4 min-w-0">
+                <div className="group p-4 sm:p-6 rounded-2xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-sm dark:cyber-card-shadow hover:border-[#2563EB]/50 hover:shadow-[0_15px_35px_rgba(37,99,235,0.2)] flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 transition-all duration-300">
+                  <div className="flex items-center gap-3.5 min-w-0">
                     <div className="p-3 rounded-2xl bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 text-[#2563EB] dark:text-[#3B82F6] group-hover:border-[#2563EB]/50 transition-colors shrink-0 shadow-xs">
                       <Mail className="w-5 h-5" />
                     </div>
@@ -135,7 +135,8 @@ export function ContactSection() {
                       </span>
                       <a
                         href={`mailto:${email}`}
-                        className="text-sm font-bold text-slate-900 dark:text-white hover:text-[#2563EB] dark:hover:text-[#60A5FA] transition-colors truncate block font-mono"
+                        dir="ltr"
+                        className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white hover:text-[#2563EB] dark:hover:text-[#60A5FA] transition-colors break-all sm:truncate block font-mono"
                         title={email}
                       >
                         {email}
@@ -145,7 +146,7 @@ export function ContactSection() {
 
                   <button
                     onClick={handleCopyEmail}
-                    className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white bg-slate-100 dark:bg-[#080B11] hover:bg-slate-200 dark:hover:bg-[#131B2D] border border-slate-200 dark:border-white/10 hover:border-[#2563EB]/40 transition-all cursor-pointer shrink-0 shadow-xs active:scale-95"
+                    className="self-end sm:self-auto inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-950 dark:hover:text-white bg-slate-100 dark:bg-[#080B11] hover:bg-slate-200 dark:hover:bg-[#131B2D] border border-slate-200 dark:border-white/10 hover:border-[#2563EB]/40 transition-all cursor-pointer shrink-0 shadow-xs active:scale-95"
                     aria-label="Copy email address"
                     title={t.contact.info.emailLabel}
                   >
@@ -210,16 +211,17 @@ export function ContactSection() {
               ) : null}
 
               {/* Location Stamp */}
-              <div className="p-5 sm:p-6 rounded-2xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-sm dark:cyber-card-shadow flex items-center gap-4">
+              <div className="p-4 sm:p-6 rounded-2xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-sm dark:cyber-card-shadow flex items-center gap-4">
                 <div className="p-3 rounded-2xl bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 text-[#2563EB] dark:text-[#3B82F6] shrink-0 shadow-xs">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-[10px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
                     {t.contact.info.locationLabel}
                   </span>
-                  <span className="text-sm font-bold text-slate-900 dark:text-white font-mono">
-                    {portfolioData.profile.location[language]}
+                  <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white font-mono flex flex-wrap items-center gap-1.5">
+                    <span>{language === "ar" ? "اليمن — مأرب" : "Marib, Yemen"}</span>
+                    <span dir="ltr" className="text-[#2563EB] dark:text-[#60A5FA]">(15°26&apos;N 45°19&apos;E)</span>
                   </span>
                 </div>
               </div>
@@ -281,7 +283,7 @@ export function ContactSection() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-7"
           >
-            <div className="p-8 sm:p-12 rounded-3xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 border-s-4 border-s-[#2563EB] backdrop-blur-xl shadow-lg dark:cyber-card-shadow relative overflow-hidden">
+            <div className="p-6 sm:p-12 rounded-3xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 border-s-4 border-s-[#2563EB] backdrop-blur-xl shadow-lg dark:cyber-card-shadow relative overflow-hidden">
               <div className="flex items-center justify-between pb-5 border-b border-slate-200 dark:border-white/10 mb-8">
                 <div className="flex items-center gap-2">
                   <span className="relative flex h-2 w-2">

@@ -24,11 +24,11 @@ export function JourneySection() {
           lead={t.journey.lead}
         />
 
-        <div className="relative max-w-4xl mx-auto mt-16 sm:mt-20">
+        <div className="relative max-w-4xl mx-auto mt-14 sm:mt-20">
           {/* Illuminated Data Spine in Unified Blue */}
-          <div className="absolute top-4 bottom-4 start-6 sm:start-8 w-[2px] bg-[#2563EB] shadow-[0_0_15px_rgba(37,99,235,0.6)]" />
+          <div className="absolute top-4 bottom-4 start-5 sm:start-8 w-[2px] bg-[#2563EB] shadow-[0_0_15px_rgba(37,99,235,0.6)] z-0" />
 
-          <div className="space-y-12 sm:space-y-14">
+          <div className="space-y-10 sm:space-y-14">
             {t.journey.milestones.map((milestone, idx) => (
               <motion.div
                 key={idx}
@@ -36,22 +36,21 @@ export function JourneySection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="relative flex items-start gap-6 sm:gap-10 group"
+                className="relative flex items-start gap-4 sm:gap-10 group"
               >
                 {/* Node indicator with continuous pulse */}
                 <motion.div
                   animate={{ scale: [1, 1.06, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: idx * 0.5 }}
-                  className="relative z-10 w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-white dark:bg-[#080B11] border-2 border-[#2563EB]/40 group-hover:border-[#2563EB] flex items-center justify-center shrink-0 shadow-md dark:shadow-2xl transition-all duration-300"
+                  className="relative z-10 w-10 h-10 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-white dark:bg-[#080B11] border-2 border-[#2563EB]/50 group-hover:border-[#2563EB] flex items-center justify-center shrink-0 shadow-md dark:shadow-2xl transition-all duration-300"
                 >
                   <span className="font-mono text-xs sm:text-sm font-black text-[#2563EB] dark:text-[#60A5FA]">
                     0{idx + 1}
                   </span>
-                  <span className="absolute -inset-1 rounded-2xl bg-[#2563EB]/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </motion.div>
 
                 {/* Milestone Card */}
-                <div className="flex-1 p-7 sm:p-10 rounded-3xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-lg dark:cyber-card-shadow hover:border-[#2563EB]/50 hover:shadow-[0_20px_45px_rgba(37,99,235,0.25)] relative overflow-hidden transition-all duration-300">
+                <div className="flex-1 min-w-0 p-5 sm:p-10 rounded-3xl bg-white/95 dark:bg-[#0D131F]/80 border border-slate-200/80 dark:border-white/10 backdrop-blur-xl shadow-lg dark:cyber-card-shadow hover:border-[#2563EB]/50 hover:shadow-[0_20px_45px_rgba(37,99,235,0.25)] relative overflow-hidden transition-all duration-300">
                   <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                     <span className="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-slate-100 dark:bg-[#080B11] border border-slate-200 dark:border-white/10 text-[#2563EB] dark:text-[#60A5FA] shadow-xs">
                       {milestone.period}
